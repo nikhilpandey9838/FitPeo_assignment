@@ -1,0 +1,767 @@
+/* App Container */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 700px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  padding: 10px 15px;
+  flex: 1;
+  min-width: 0;
+  max-width: 650px;
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  opacity: 0.6;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  flex: 1;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.notification-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.notification-icon img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Sidebar Container */
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 30px 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.logo-health {
+  color: #06b6d4;
+}
+
+.logo-care {
+  color: #3B3F8C;
+}
+
+.nav-section {
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.nav-title {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+}
+
+.nav-item.active {
+  background-color: #f1f5f9;
+  color: #4338ca;
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  opacity: 0.7;
+}
+
+.nav-text {
+  font-size: 14px;
+}
+
+.settings-section {
+  margin-top: auto;
+  padding: 0 20px;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  flex: 1;
+  padding: 20px 30px;
+}
+
+.dashboard-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.dashboard-left {
+  flex: 1;
+}
+
+.dashboard-right {
+  flex: 1;
+}
+
+/* Dashboard Overview */
+.dashboard-overview {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dashboard-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.dashboard-period {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.overview-content {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.anatomy-container {
+  flex: 2;
+}
+
+.health-status-container {
+  flex: 1;
+}
+
+/* Anatomy Section */
+.anatomy-section {
+  position: relative;
+  height: 300px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.anatomy-illustration {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anatomy-image {
+  height: 90%;
+  object-fit: contain;
+}
+
+.health-indicator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.indicator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.indicator-dot.green {
+  background-color: #10b981;
+}
+
+.indicator-dot.red {
+  background-color: #ef4444;
+}
+
+.indicator-dot.yellow {
+  background-color: #f59e0b;
+}
+
+.indicator-text {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.health-indicator.heart {
+  top: 24%;
+  right: 30%;
+}
+
+.health-indicator.lungs {
+  top: 40%;
+  right: 30%;
+}
+
+.health-indicator.teeth {
+  top: 25%;
+  left: 40%;
+}
+
+.health-indicator.bone {
+  bottom: 30%;
+  right: 35%;
+}
+
+/* Health Status Cards */
+.health-status-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.health-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-title {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.card-date {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.card-status {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-indicator.warning {
+  background-color: #ef4444;
+}
+
+.status-indicator.good {
+  background-color: #10b981;
+}
+
+.status-indicator.excellent {
+  background-color: #3b82f6;
+}
+
+.status-bar {
+  height: 4px;
+  background-color: #e2e8f0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.status-progress {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.status-progress.warning {
+  background-color: #ef4444;
+}
+
+.status-progress.good {
+  background-color: #10b981;
+}
+
+.status-progress.excellent {
+  background-color: #3b82f6;
+}
+
+.health-details {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.details-button {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Activity Feed */
+.activity-feed {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.activity-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.activity-subtitle {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.activity-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100px;
+  padding: 0 10px;
+}
+
+.chart-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30px;
+}
+
+.chart-bar {
+  width: 6px;
+  background-color: #4338ca;
+  border-radius: 3px;
+  transition: height 0.3s ease;
+}
+
+.chart-label {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Calendar Container */
+.calendar-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+/* Calendar View */
+.calendar-view {
+  margin-bottom: 30px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-title {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.calendar-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.calendar-control {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #f1f5f9;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.calendar-control img {
+  width: 16px;
+  height: 16px;
+}
+
+.calendar-grid {
+  margin-bottom: 25px;
+}
+
+.calendar-days {
+  display: flex;
+  gap: 15px;
+}
+
+.day-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.day-name {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.day-number {
+  font-size: 16px;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 15px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.day-number.active {
+  /* background-color: #4338ca; */
+  /* color: #ffffff; */
+}
+
+.time-slot {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.time-slot.selected {
+  background-color: #4338ca;
+  color: #ffffff;
+}
+
+.time-slot.selected-grey {
+  background-color: #94a3b8;
+  color: #ffffff;
+}
+
+.time-slot.combined-grey-left {
+  background-color: #94a3b8;
+  color: #fff;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 8px 0 0 0 #94a3b8;
+}
+
+.time-slot.combined-grey-right {
+  background-color: #94a3b8;
+  color: #fff;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: -8px 0 0 0 #94a3b8;
+}
+
+.appointment-cards {
+  display: flex;
+  gap: 15px;
+}
+
+.appointment-card {
+  flex: 1;
+  background-color: #e0e7ff;
+  border-radius: 16px;
+  padding: 15px;
+  border: 1px solid #e0e7ff;
+}
+
+.appointment-card.highlighted {
+  background-color: #4338ca;
+  border-color: #3730a3;
+}
+
+.appointment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.appointment-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4338ca;
+  margin: 0;
+}
+
+.appointment-card.highlighted .appointment-title {
+  color: #e0e7ff;
+}
+
+.appointment-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.appointment-time {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.appointment-card.highlighted .appointment-time {
+  color: #e0e7ff;
+}
+
+.appointment-doctor {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.appointment-card.highlighted .appointment-doctor {
+  color: #e0e7ff;
+}
+
+/* Upcoming Schedule */
+.upcoming-schedule {
+  margin-top: 30px;
+}
+
+.schedule-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+.schedule-section {
+  margin-bottom: 25px;
+}
+
+.schedule-day {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.appointment-list {
+  display: flex;
+  gap: 15px;
+}
+
+/* Simple Appointment Card */
+.simple-appointment-card {
+  flex: 1;
+  background-color: #e0e7ff;
+  border-radius: 16px;
+  padding: 15px;
+  border: 1px solid #e0e7ff;
+}
+
+.simple-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.simple-card-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4338ca;
+  margin: 0;
+}
+
+.simple-card-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.simple-card-time {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    flex-direction: column;
+  }
+
+  .overview-content {
+    flex-direction: column;
+  }
+
+  .appointment-cards {
+    flex-direction: column;
+  }
+
+  .appointment-list {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  .nav-section {
+    display: none;
+  }
+
+  .settings-section {
+    display: none;
+  }
+
+  .calendar-days {
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+}
+
+/* Remove previous column background rules */
+/* (deleted) */
+
+/* Add background to just the numbers */
+/* (deleted) */
+
+.calendar-days .attach-left {
+  margin-right: -8px;
+  z-index: 1;
+}
+
+.calendar-days .attach-right {
+  margin-left: -8px;
+  z-index: 1;
+}
